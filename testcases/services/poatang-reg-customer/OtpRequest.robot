@@ -9,7 +9,7 @@ Library  Collections
 
 *** Test Cases ***
 POST Request OTP and return data - success
-    [tags]  Regression
+    [tags]  OTPRequest
     Create Session  mysession  http://localhost:8081  verify=true
     &{body}=  Create Dictionary  title=foo  body=bar  userId=9000
     &{header}=  Create Dictionary  Cache-Control=no-cache

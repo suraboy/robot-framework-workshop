@@ -12,7 +12,7 @@ Do a GET Request and validate the response code and response body
     [documentation]  This test case verifies that the response code of the GET Request should be 200,
     ...  the response body contains the 'title' key with value as 'London',
     ...  and the response body contains the key 'location_type'.
-    [tags]  Smoke
+    [tags]  Smoke TestJson
     Create Session  mysession  https://jsonplaceholder.typicode.com  verify=true
     ${response}=  GET On Session  mysession  /posts  params=query=london
     Status Should Be  200  ${response}  #Check Status as 200
@@ -30,7 +30,7 @@ Do a POST Request and validate the response code, response body, and response he
     [documentation]  This test case verifies that the response code of the POST Request should be 201,
     ...  the response body contains the 'id' key with value '101',
     ...  and the response header 'Content-Type' has the value 'application/json; charset=utf-8'.
-    [tags]  Regression
+    [tags]  Regression TestJson
     Create Session  mysession  https://jsonplaceholder.typicode.com  verify=true
     &{body}=  Create Dictionary  title=foo  body=bar  userId=9000
     &{header}=  Create Dictionary  Cache-Control=no-cache

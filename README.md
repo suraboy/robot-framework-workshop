@@ -1,5 +1,14 @@
-# robot-framework-workshop
-POC Robot framework
+# Simple Robot Framework
+use for poc automated test by robot framework
+# Feature 
+- can install via `python` and `pip`
 
-robot -d reports atest
-
+# Command
+Install packages
+```php
+pip3 install -r requirements.txt 
+```
+Run test
+```php
+robot -d reports testcases
+```
