@@ -1,2 +1,4 @@
 /reports/*
 .idea/*
+/testcases/kafka/commons/__pycache__/*.pyc
+/testcases/kafka/commons/__pycache__/*

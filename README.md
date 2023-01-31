@@ -8,6 +8,13 @@ Install packages
 ```php
 pip3 install -r requirements.txt 
 ```
+
+Start kafka contrainer
+```
+docker-compose up -d
+```
+
+```
 Run test
 ```php
 robot -d reports testcases
