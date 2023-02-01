@@ -45,7 +45,7 @@ services:
     container_name: kowl
     hostname: kowl
     volumes:
-      - ./config/kowl.yaml:/etc/kowl/config.yaml
+      - ./docker/kowl.yaml:/etc/kowl/config.yaml
     ports:
       - "8888:8080"
     entrypoint: ./kowl --config.filepath=/etc/kowl/config.yaml
