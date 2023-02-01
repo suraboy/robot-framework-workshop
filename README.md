@@ -14,8 +14,7 @@ Start kafka contrainer
 docker-compose up -d
 ```
 
-```
 Run test
-```php
-robot -d reports testcases
+```
+make test
 ```
