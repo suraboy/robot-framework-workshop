@@ -35,7 +35,7 @@ services:
       - zookeeper
     healthcheck:
       test:
-        ["CMD", "kafka-topics.sh", "--list", "--zookeeper", "zookeeper:2181"]
+        [ "CMD", "kafka-topics.sh", "--list", "--zookeeper", "zookeeper:2181" ]
       interval: 30s
       timeout: 10s
       retries: 4
@@ -51,3 +51,8 @@ services:
     entrypoint: ./kowl --config.filepath=/etc/kowl/config.yaml
     depends_on:
       - broker
+  redis:
+    container_name: redis
+    image: redislabs/redismod
+    ports:
+      - "6379:6379"

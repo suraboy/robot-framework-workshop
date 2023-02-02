@@ -6,7 +6,7 @@ Library    ./commons/extended_consumer.py    WITH NAME    ExtendedKafkaConsumer
 Library    ./commons/extended_producer.py    WITH NAME    ExtendedKafkaProducer
 
 *** Variables ***
-# Local : Start => security_protocol=PLAINTEXT   sasl_mechanism=SASL_SSL
+# Local : Start =>
 ${KAFKA_BOOTSTRAP_SERVERS}      localhost:9092
 ${KAFKA_TOPIC}                  testRobot
 ${KAFKA_USERNAME}               None
@@ -17,7 +17,12 @@ ${KAFKA_CERT}                   None
 ${KAFKA_GROUP_ID}               simple-robot-framework
 
 *** Test Cases ***
-Test Kafka Service
+#Test Connect Produce Kafka By Confluent Kafka
+#    ${RESULT} =     Connect To Kafka Custom
+#    log    ${RESULT}
+#    Log to console   ${RESULT}
+
+Test Kafka Service By Robot Kafka Library
     ${reqID} =    Generate Random String    15
 
     # Create Kafka Producer
